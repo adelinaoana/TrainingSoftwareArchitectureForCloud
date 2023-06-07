@@ -5,7 +5,7 @@
     "storageAccounts": {
       "value": [
         {
-          "name": "arcacstor",
+          "name": "arcaoistore",
           "blobs": [],
           "shares": [],
           "queues": [],

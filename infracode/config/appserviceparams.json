@@ -6,18 +6,18 @@
     "appServicePlans": {
       "value": [
         {
-          "name": "arcacappserviceplan",
+          "name": "arcaoiappserviceplan",
           "sku": "S1",
-          "rg": "arc"
+          "rg": "rg_arc_ai"
         }
       ]
     },
     "appServices": {
       "value": [
         {
-          "name": "arcacappservice",
-          "servicePlanName": "arcacappserviceplan",
-          "servicePlanResourceGrup": "arc"
+          "name": "arcaoiappservice",
+          "servicePlanName": "arcaoiappserviceplan",
+          "servicePlanResourceGrup": "rg_arc_ai"
         }
       ]
     }

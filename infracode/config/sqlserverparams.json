@@ -6,9 +6,9 @@
     "sqlServers": {
       "value": [          
           {
-          "name": "arcacsqlserver",
-          "database": "arcacsqldb",
-          "username": "andrei",
+          "name": "arcaoisqlserver",
+          "database": "arcaoisqldb",
+          "username": "adelina",
           "password": "P@ssw0rd98763123",
           "publicNetworkAccess": "Enabled"
           }
