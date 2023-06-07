@@ -8,5 +8,6 @@ namespace CleanArc.Application.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public Guid? ChallengeId { get; set; }
+        public bool Notify { get; set; }
     }
 }

@@ -160,4 +160,7 @@
     <value>{0} is required.</value>
     <comment>{0} - Property name;</comment>
   </data>
+  <data name="DuplicateImportantErrorMessage" xml:space="preserve">
+    <value>There is already an IMPORTANT note to be resolved, please resolve that one before adding a new one.</value>
+  </data>
 </root>

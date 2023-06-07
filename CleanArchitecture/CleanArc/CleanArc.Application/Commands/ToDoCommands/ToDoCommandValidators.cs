@@ -6,6 +6,8 @@ using CleanArc.Common.Localization;
 using CleanArc.Domain.Entities;
 using System;
 using System.Linq;
+using System.Security.AccessControl;
+using CleanArc.Application.Common;
 
 namespace CleanArc.Application.Commands.ToDoCommands
 {
@@ -19,6 +21,17 @@ namespace CleanArc.Application.Commands.ToDoCommands
             this.repository = repository;
             RuleFor(x => x.ToDo).Must(BeUnique).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.DUPLICATE_ENTITY), nameof(ToDo)));
             RuleFor(x => x.ToDo.Name).Must(NotNullOrEmpty).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.REQUIRED), nameof(ToDo.Name)));
+            RuleFor(x => x.ToDo).Must(NotAlreadyExistsImportant).WithMessage(string.Format(i18nService.GetMessage(ErrorMessagesNames.DUPLICATE_IMPORTANT_ENTITY), nameof(ToDo.Name)));
+        }
+
+        private bool NotAlreadyExistsImportant(ToDoModel toDoModel)
+        {
+            if (toDoModel == null || !toDoModel.Name.Contains(Constants.IMPORTANT))
+                return true;
+
+            var toDo = repository.GetEntities<ToDo>().FirstOrDefault(x => x.Name.Equals(Constants.IMPORTANT));
+
+            return toDo == null;
         }
 
         private bool BeUnique(ToDoModel toDoModel)
@@ -28,7 +41,7 @@ namespace CleanArc.Application.Commands.ToDoCommands
             {
                 return false;
             }
-                return true;
+            return true;
         }
 
         private bool NotNullOrEmpty(string text)

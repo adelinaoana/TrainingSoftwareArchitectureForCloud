@@ -14,6 +14,7 @@ namespace CleanArc.Common.Errors
         public const string OUT_OF_RANGE = "OutOfRangeErrorMessage";
         public const string NOT_FOUND = "NotFoundErrorMessage";
         public const string REQUIRED = "RequiredErrorMessage";
+        public const string DUPLICATE_IMPORTANT_ENTITY = "DuplicateImportantErrorMessage";
         public const string GREATER_OR_EQUAL_VALUE = "GreaterOrEqualErrorMessage";
         public const string LOWER_OR_EQUAL_VALUE = "LowerOrEqualErrorMessage";
         public const string GREATER_VALUE = "GreaterErrorMessage";
