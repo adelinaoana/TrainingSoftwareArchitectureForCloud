@@ -58,8 +58,11 @@ namespace DDDCqrsEs.WebJob.Services
 
                 await processor.StartProcessingAsync();
 
-                Console.ReadKey();
-                await processor.StopProcessingAsync();
+                while (true)
+                {
+                }
+                //Console.ReadKey();
+                //await processor.StopProcessingAsync();
             }
         }
 

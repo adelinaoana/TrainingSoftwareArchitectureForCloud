@@ -47,6 +47,7 @@ namespace DDDCqrsEs.Application.Commands.StockCommands
             _stockProjectionRepository = stockProjectionRepository;
             RuleFor(x => x.BestBeforeDate).Must(IsNotInPast).WithMessage("You cannot enter a date from the past.");
             RuleFor(x => x).Must(BeUnique).WithMessage("License plate already exists in database.");
+            RuleFor(x => x).Must(HasNotChangedSince).WithMessage("Data was changed by another user.");
         }
          
         private bool BeUnique(UpdateStockCommand command)
