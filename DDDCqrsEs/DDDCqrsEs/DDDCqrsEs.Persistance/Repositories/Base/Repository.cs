@@ -23,18 +23,16 @@ namespace DDDCqrsEs.Persistance.Repositories.Base
         public IQueryable<T> Query(Expression<Func<T, bool>> whereFilter = null) 
         {
             var query = ToDoDbContext.Set<T>();
-            if (whereFilter != null)
-            {
-                return query.Where(whereFilter);
-            }
+            if (whereFilter == null) return query;
 
-            return query;
+            return query.Where(whereFilter);
         }
 
         public int SaveChanges()
         {
             return ToDoDbContext.SaveChanges();
         }
+
         public void Add(T entity, bool saveImmediately = false) 
         {
             ToDoDbContext.Add(entity);

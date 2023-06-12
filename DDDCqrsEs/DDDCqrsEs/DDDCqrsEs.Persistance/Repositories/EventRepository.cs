@@ -26,7 +26,7 @@ namespace DDDCqrsEs.Persistance.Repositories
         {
             string data = JsonConvert.SerializeObject(_event.Stock);
 
-            EventEntity eventEnity = new EventEntity(_event.AggregateId, _event.Version)
+            EventEntity eventEntity = new EventEntity(_event.AggregateId, _event.Version)
             {
                 EventType = _event.EventType,
                 Data = data,
@@ -34,10 +34,9 @@ namespace DDDCqrsEs.Persistance.Repositories
             };
 
             var cloudTable = await _connectionCreator.CreateConnection(nameof(EventStore));
-            var insertOperation = TableOperation.Insert(eventEnity);
+            var insertOperation = TableOperation.Insert(eventEntity);
 
             await cloudTable.ExecuteAsync(insertOperation);
-            
         }
 
         public async IAsyncEnumerable<EventEntity> GetAllEvents()

@@ -11,9 +11,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DDDCqrsEs.Application\DDDCqrsEs.Application.csproj" />
-    <ProjectReference Include="..\DDDCqrsEs.Common\DDDCqrsEs.Common.csproj" />
     <ProjectReference Include="..\DDDCqrsEs.Domain\DDDCqrsEs.Domain.csproj" />
-    <ProjectReference Include="..\DDDCqrsEs.Infrastructure\DDDCqrsEs.Infrastructure.csproj" />
     <ProjectReference Include="..\DDDCqrsEs.Persistance\DDDCqrsEs.Persistance.csproj" />
   </ItemGroup>
   <ItemGroup>

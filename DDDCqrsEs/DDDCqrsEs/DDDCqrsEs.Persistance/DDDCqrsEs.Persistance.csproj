@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Mappers\**" />
+    <EmbeddedResource Remove="Mappers\**" />
+    <None Remove="Mappers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Migrations\20220114153046_AddDefaultRolesMigration.sql" />
     <None Remove="Migrations\20230328172015_AddAppRoles.sql" />
   </ItemGroup>
@@ -31,10 +37,6 @@
     <ProjectReference Include="..\DDDCqrsEs.Application\DDDCqrsEs.Application.csproj" />
     <ProjectReference Include="..\DDDCqrsEs.Common\DDDCqrsEs.Common.csproj" />
     <ProjectReference Include="..\DDDCqrsEs.Domain\DDDCqrsEs.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Mappers\" />
   </ItemGroup>
 
 </Project>

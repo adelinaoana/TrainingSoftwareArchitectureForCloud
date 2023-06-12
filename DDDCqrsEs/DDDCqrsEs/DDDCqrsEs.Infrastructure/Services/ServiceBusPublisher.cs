@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Azure.Messaging.ServiceBus;
-using Newtonsoft.Json;
+using DDDCqrsEs.Application.Services;
 using DDDCqrsEs.Domain.Events;
+using Newtonsoft.Json;
 
-namespace DDDCqrsEs.Application.Services
+namespace DDDCqrsEs.Infrastructure.Services
 {
     public class ServiceBusPublisher : IBaseEventPublisher
     {

@@ -13,7 +13,7 @@ namespace DDDCqrsEs.Persistance.Repositories
     [MapServiceDependency(Name: nameof(StockProjectionRepository))]
     public class StockProjectionRepository : IStockProjectionRepository
     {
-        private ToDoDbContext dbContext;
+        private readonly ToDoDbContext dbContext;
         public StockProjectionRepository(ToDoDbContext dbContext)
         {
             this.dbContext = dbContext;
@@ -21,13 +21,16 @@ namespace DDDCqrsEs.Persistance.Repositories
 
         public IEnumerable<StockProjection> GetAllStocks()
         {
-
             return dbContext.Stocks.ToList();
         }
 
         public StockProjection GetStockById(Guid id)
         {
             var stock = dbContext.Stocks.FirstOrDefault(s => s.Id == id);
+
+            if (stock == null)
+                return null;
+
             stock.BestBeforeDate = stock.BestBeforeDate.ToLocalTime();
             return stock;
         }
@@ -40,35 +43,27 @@ namespace DDDCqrsEs.Persistance.Repositories
 
         public void DeleteStock(Guid stockId)
         {
-
             var stockToBeDeleted = dbContext.Stocks.FirstOrDefault(s => s.Id == stockId);
-            if (stockToBeDeleted != null)
-            {
-                stockToBeDeleted.Status = StockStatusValues.CLOSED;
-                dbContext.SaveChanges();
-            }
+            if (stockToBeDeleted == null) return;
 
+            stockToBeDeleted.Status = StockStatusValues.CLOSED;
+            dbContext.SaveChanges();
         }
 
         public void UpdateStock(Guid stockId, StockModel stock, int version)
         {
-
             var stockToBeUpdated = dbContext.Stocks.FirstOrDefault(s => s.Id == stockId);
-            if (stockToBeUpdated != null)
-            {
-                ModelMapper.MapModelIntoProjection(stockToBeUpdated, stock);
-                stockToBeUpdated.Version = version;
-                dbContext.SaveChanges();
-            }
+            if (stockToBeUpdated == null) return;
 
+            ModelMapper.MapModelIntoProjection(stockToBeUpdated, stock);
+            stockToBeUpdated.Version = version;
+            dbContext.SaveChanges();
         }
 
         public StockProjection GetStockByLicensePlate(string licensePlate)
         {
-
             var stock = dbContext.Stocks.FirstOrDefault(s => s.LicensePlate == licensePlate);
             return stock;
-
         }
     }
 }
