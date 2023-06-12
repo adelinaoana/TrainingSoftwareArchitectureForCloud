@@ -1,10 +1,8 @@
 ﻿using DDDCqrsEs.Common.Constants;
-using DDDCqrsEs.Domain.Entities;
 using DDDCqrsEs.Domain.Events;
 using DDDCqrsEs.Domain.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DDDCqrsEs.Domain.Aggregates
 {

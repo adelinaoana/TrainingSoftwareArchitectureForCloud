@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using DDDCqrsEs.WebUI;
 using DDDCqrsEs.Persistance;
 
 namespace DDDCqrsEs.WebUI

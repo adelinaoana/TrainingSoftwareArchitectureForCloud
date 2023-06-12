@@ -1,5 +1,4 @@
-﻿using MediatR;
-using DDDCqrsEs.Application.Common;
+﻿using DDDCqrsEs.Application.Common;
 using DDDCqrsEs.Application.QueryProjections;
 using System;
 using System.Collections.Generic;

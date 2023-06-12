@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using DDDCqrsEs.Common;
 using DDDCqrsEs.Domain.Entities;
 using DDDCqrsEs.Domain.Projections;
-using DDDCqrsEs.Persistance.DataModel;
 using Quotation.Domain.Entities.Authentication;
 
 namespace DDDCqrsEs.Persistance

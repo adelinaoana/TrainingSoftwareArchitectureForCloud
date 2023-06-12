@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DDDCqrsEs.Common.Localization
+﻿namespace DDDCqrsEs.Common.Localization
 {
     public interface Ii18nService
     {

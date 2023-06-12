@@ -1,11 +1,9 @@
 ﻿using Newtonsoft.Json;
-using DDDCqrsEs.Domain.Entities;
 using DDDCqrsEs.Domain.Events;
 using DDDCqrsEs.Domain.Models;
 using DDDCqrsEs.Persistance.DataModel;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DDDCqrsEs.Application.Common
 {

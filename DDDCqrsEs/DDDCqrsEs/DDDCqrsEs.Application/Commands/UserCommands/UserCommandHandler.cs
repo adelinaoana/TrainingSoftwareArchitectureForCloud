@@ -1,12 +1,6 @@
 ﻿using DDDCqrsEs.Application.Models.AuthenticationModels;
 using MediatR;
-using DDDCqrsEs.Common.Constants;
-using DDDCqrsEs.Common.Errors;
-using DDDCqrsEs.Common.Identity;
 using DDDCqrsEs.Common.Localization;
-using DDDCqrsEs.Domain.Repositories;
-using System;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 

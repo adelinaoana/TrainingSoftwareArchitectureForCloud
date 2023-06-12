@@ -1,7 +1,5 @@
 ﻿using DDDCqrsEs.Application.Models.AuthenticationModels;
-using DDDCqrsEs.Application.Queries.UserQueries;
 using MediatR;
-using DDDCqrsEs.Domain.Repositories;
 using System.Threading;
 using System.Threading.Tasks;
 

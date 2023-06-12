@@ -1,9 +1,6 @@
 ﻿using MediatR;
-using DDDCqrsEs.Domain.Entities;
 using DDDCqrsEs.Domain.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DDDCqrsEs.Domain.Events
 {

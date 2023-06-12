@@ -1,8 +1,5 @@
 ﻿using DDDCqrsEs.Application.Common;
-using DDDCqrsEs.Domain.Events;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DDDCqrsEs.Application.Commands.StockCommands
 {

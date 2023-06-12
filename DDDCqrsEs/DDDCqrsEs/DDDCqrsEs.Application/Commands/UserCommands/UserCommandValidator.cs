@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using DDDCqrsEs.Common.Errors;
 using DDDCqrsEs.Common.Localization;
-using DDDCqrsEs.Domain.Repositories;
 using DDDCqrsEs.Common.Extensions;
 using DDDCqrsEs.Application.Models.AuthenticationModels;
 

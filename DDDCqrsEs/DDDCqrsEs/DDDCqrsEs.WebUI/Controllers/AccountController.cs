@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using DDDCqrsEs.WebUI.Controllers.Base;
 using DDDCqrsEs.Application.Commands.UserCommands;
 using DDDCqrsEs.Application.Queries.UserQueries;
-using DDDCqrsEs.Application.Queries.UserQueries;
 
 namespace DDDCqrsEs.WebUI.Controllers
 {

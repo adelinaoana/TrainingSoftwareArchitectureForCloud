@@ -1,9 +1,5 @@
-﻿using FluentValidation;
-using FluentValidation.Results;
-using MediatR;
+﻿using MediatR;
 using DDDCqrsEs.Application.Common;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using DDDCqrsEs.Common.Identity;
 using System.Threading.Tasks;

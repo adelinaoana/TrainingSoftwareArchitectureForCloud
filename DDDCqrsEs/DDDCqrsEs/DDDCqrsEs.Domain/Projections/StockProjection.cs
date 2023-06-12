@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DDDCqrsEs.Domain.Models;
-using DDDCqrsEs.Domain.Entities.Base;
-using DDDCqrsEs.Domain.Events;
 
 namespace DDDCqrsEs.Domain.Projections
 {

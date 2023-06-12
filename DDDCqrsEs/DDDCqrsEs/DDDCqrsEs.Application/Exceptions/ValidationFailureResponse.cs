@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DDDCqrsEs.Application.Exceptions
+﻿namespace DDDCqrsEs.Application.Exceptions
 {
     public class ValidationFailureRespone
     {

@@ -1,7 +1,6 @@
 ﻿using DDDCqrsEs.Application.Common;
 using DDDCqrsEs.Common;
 using DDDCqrsEs.Common.Constants;
-using DDDCqrsEs.Domain.Entities;
 using DDDCqrsEs.Domain.Models;
 using DDDCqrsEs.Domain.Projections;
 using DDDCqrsEs.Domain.Repositories;

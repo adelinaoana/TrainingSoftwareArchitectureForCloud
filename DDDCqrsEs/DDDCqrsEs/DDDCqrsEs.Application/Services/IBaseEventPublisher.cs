@@ -1,7 +1,4 @@
 ﻿using DDDCqrsEs.Domain.Events;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DDDCqrsEs.Application.Services

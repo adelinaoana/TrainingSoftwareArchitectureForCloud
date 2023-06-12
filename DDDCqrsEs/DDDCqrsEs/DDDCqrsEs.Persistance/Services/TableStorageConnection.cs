@@ -1,10 +1,6 @@
 ﻿using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
-using DDDCqrsEs.Common;
 using DDDCqrsEs.Persistance;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DDDCqrsEs.Infrastructure.Services

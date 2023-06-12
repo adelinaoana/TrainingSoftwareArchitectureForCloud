@@ -1,10 +1,7 @@
 ﻿using DDDCqrsEs.Application.Common;
-using DDDCqrsEs.Domain.Aggregates;
-using DDDCqrsEs.Domain.Entities;
 using DDDCqrsEs.Domain.Projections;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DDDCqrsEs.Application.Queries.StockQueris
 {

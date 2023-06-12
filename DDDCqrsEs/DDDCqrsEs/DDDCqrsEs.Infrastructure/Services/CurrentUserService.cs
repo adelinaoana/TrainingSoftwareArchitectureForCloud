@@ -3,9 +3,7 @@ using DDDCqrsEs.Common;
 using DDDCqrsEs.Common.Constants;
 using DDDCqrsEs.Common.Identity;
 using System;
-using System.Collections.Generic;
 using System.Security.Claims;
-using System.Text;
 
 namespace DDDCqrsEs.Infrastructure.Services
 {

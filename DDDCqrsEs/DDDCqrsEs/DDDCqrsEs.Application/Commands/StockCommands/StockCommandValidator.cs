@@ -1,9 +1,6 @@
 ﻿using FluentValidation;
-using DDDCqrsEs.Common;
 using DDDCqrsEs.Domain.Repositories;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DDDCqrsEs.Application.Commands.StockCommands
 {

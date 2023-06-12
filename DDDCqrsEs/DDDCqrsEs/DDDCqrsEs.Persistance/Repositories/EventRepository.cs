@@ -1,12 +1,10 @@
 ﻿using DDDCqrsEs.Domain.Events;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using DDDCqrsEs.Domain.Repositories;
 using DDDCqrsEs.Common;
 using Newtonsoft.Json;
 using DDDCqrsEs.Persistance.DataModel;
-using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using System.Threading.Tasks;
 
