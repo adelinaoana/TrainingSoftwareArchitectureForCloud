@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using DDDCqrsEs.Persistance.DataModel;
 using Microsoft.WindowsAzure.Storage.Table;
 using System.Threading.Tasks;
+using Microsoft.WindowsAzure.Storage;
 
 namespace DDDCqrsEs.Persistance.Repositories
 {
@@ -36,7 +37,17 @@ namespace DDDCqrsEs.Persistance.Repositories
             var cloudTable = await _connectionCreator.CreateConnection(nameof(EventStore));
             var insertOperation = TableOperation.Insert(eventEntity);
 
-            await cloudTable.ExecuteAsync(insertOperation);
+            try
+            {
+                await cloudTable.ExecuteAsync(insertOperation);
+            }
+            catch (StorageException ex)
+            {
+                if (ex.RequestInformation.HttpStatusCode == 409)
+                {
+                    throw new InvalidOperationException("Data was changed by another user.", ex);
+                }
+            }
         }
 
         public async IAsyncEnumerable<EventEntity> GetAllEvents()
